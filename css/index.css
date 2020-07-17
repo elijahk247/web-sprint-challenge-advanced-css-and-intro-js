@@ -137,10 +137,18 @@ button:hover{
 
 @media(max-width: 500px) {
     nav span {
-        padding: 5%;
+        padding-left: 5%;
     }
     nav a {
-        padding-right: 5%;
+        padding: 0 5%;
+    }
+
+    .bordered {
+        margin-left: 5%;
+    }
+
+    nav a {
+        font-size: 2rem;
     }
 
     .title-container div {

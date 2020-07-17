@@ -357,3 +357,13 @@ function randomize(/* Code here */){
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+ function get20sAgain(arr) {
+   return arr.filter(diedIn20sAgain);
+ }
+
+ function diedIn20sAgain(arr) {
+  return arr.years.substring(0,4) >= 1900 && arr.years.substring(7,10) <= 2000;
+}
+
+console.log('Strech 3: ', get20sAgain(artists));
