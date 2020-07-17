@@ -214,9 +214,9 @@ console.log('Task 1: Bio of the third artist - ', artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-console.log('Task 2: Vincent Van Gogh', artists[8].name);
-//artists[8].name = 'Vincent Van Gogh';
-console.log('Task 2: Vincent Van Gogh', artists[8].name);
+console.log('Task 2: ', artists[8].name);
+artists[8].name = 'Vincent Van Gogh';
+console.log('Task 2: ', artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -227,7 +227,7 @@ console.log('Task 2: Vincent Van Gogh', artists[8].name);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(arr, num) {
-    return `The artist at index ${num} is ${arr[num]}.`;
+    return `The artist at index ${num} is ${arr[num].name}.`;
   }
   
   console.log('Task 3: ', getArtistByIndex(artists, 0));
@@ -264,15 +264,16 @@ console.log('Task 4: ', get20s(artists));
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-/*
-function removeArtist(arr, num) {
-  let removedArtist = arr.slice(num,1);
 
-  return removedArtist
+function removeArtist(arr, num) {
   //return arr.length;
+  //let removedArtist = arr.slice(num,1);
+
+  arr.splice(num,1);
+  return arr;
 }
 
-console.log('Task 5: ', removeArtist(artists, 0));*/
+console.log('Task 5: ', removeArtist(artists, 0));
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
